@@ -5,7 +5,7 @@ pipeline {
         stage('checkout') {
             steps {
                 echo 'check out code'
-                checkout scmGit(branches: [[name: '*/development']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/harisparavoor/terraformwithjekinspipline.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/harisparavoor/terraformwithjenkinspipline.git']])
             }
         }
         stage ('terraform init'){ 
