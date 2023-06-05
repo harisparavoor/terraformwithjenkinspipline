@@ -1,0 +1,11 @@
+variable "vpc_cidr" {}
+variable "public_subnet_a" {}
+variable "public_subnet_b" {}
+variable "private_subnet_a" {}
+variable "private_subnet_b" {}
+variable "project" {}
+variable "env" {}
+variable "zone_a" {}
+variable "zone_b" {}
+variable "region" {}
+variable "owner" {}
