@@ -27,7 +27,7 @@ resource "aws_security_group" "TF-web-sg" {
     from_port        = 8080
     to_port          = 8080
     protocol         = "tcp"
-    cidr_blocks      = [var.vpc_cidr]
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   ingress {
