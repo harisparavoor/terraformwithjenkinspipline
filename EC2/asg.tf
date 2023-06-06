@@ -31,9 +31,9 @@ resource "aws_autoscaling_group" "app-asg" {
             version = "$Latest"
                  }
   #aws_launch_template = format("${var.project}_${var.env}_asg_lc")
-  min_size             = 1
+  min_size             = 0
   max_size             = 4
-  desired_capacity     = 1
+  desired_capacity     = 0
   vpc_zone_identifier  = [var.private_subnet_a_id, var.private_subnet_b_id]
   #health_check_type    = "ELB"
   target_group_arns    = ["${aws_alb_target_group.TF_target_group.arn}"]

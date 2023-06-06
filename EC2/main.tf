@@ -39,6 +39,9 @@ resource "aws_instance" "web2" {
   tags = {
     Name = "Web2"
   }
+   lifecycle {
+    create_before_destroy = true
+  }
 }
 #resource block for eip #
 resource "aws_eip" "TF-eip" {

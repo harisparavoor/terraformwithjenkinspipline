@@ -1,4 +1,5 @@
 #!/bin/bash
-sudo su
-apt-get update
-apt-get install apache2
+sudo apt-get update -y
+sudo apt-get install apache2 -y
+sudo service apache2 enable
+sudo service apache2 start
