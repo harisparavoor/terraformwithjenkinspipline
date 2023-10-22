@@ -1,6 +1,7 @@
 resource "aws_alb" "TF_alb_internal" {
   name               = var.alb_name
-  internal           = true
+  #internal           = true
+  internal           = false
   load_balancer_type = "application"
   security_groups    = ["${aws_security_group.TF-alb-sg.id}"]
   subnets            = [var.private_subnet_a_id, var.private_subnet_b_id]
